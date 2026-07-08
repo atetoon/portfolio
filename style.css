@@ -332,8 +332,13 @@ h2 {
   }
 
   .item-header {
-    flex-direction: column;
-    gap: 2px;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+
+  .item-header h3 {
+    flex: 1;
+    min-width: 0;
   }
 
   .stack-grid {
