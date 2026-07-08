@@ -4,6 +4,20 @@
   padding: 0;
 }
 
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 2;
+}
+
 :root {
   --bg: #0a0a0a;
   --fg: #e9e5de;
@@ -37,7 +51,7 @@ body {
   font-family: "DM Sans", sans-serif;
   font-size: 15px;
   line-height: 1.65;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: background 0.5s ease, color 0.5s ease;
 }
 
 body::before {
@@ -92,6 +106,16 @@ body::before {
 
 .eyebrow:hover {
   color: var(--fg);
+}
+
+.resume-arrow {
+  width: 11px;
+  height: 11px;
+  transition: transform 0.15s ease;
+}
+
+.eyebrow:hover .resume-arrow {
+  transform: translate(2px, -2px);
 }
 
 h1 {
@@ -215,6 +239,19 @@ h1 {
 .item-header svg {
   width: 16px;
   height: 16px;
+}
+
+.item-header h3 a {
+  color: var(--fg);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 1px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.item-header h3 a:hover {
+  color: var(--link-hover);
+  border-color: currentColor;
 }
 
 section {

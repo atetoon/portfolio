@@ -14,7 +14,13 @@
 
   <main class="container">
     <header class="hero">
-      <a class="eyebrow" href="resume.pdf">resume</a>
+      <a class="eyebrow" href="resume.pdf">
+        resume
+        <svg class="resume-arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </a>
+
       <h1>Dhruv Pandey</h1>
       <p class="intro">
         <span>web dev</span>
@@ -22,7 +28,7 @@
       </p>
 
       <div class="meta">
-        <span>DL, India</span>
+        <span>Delhi, India</span>
         <span>Open to internships</span>
       </div>
 
@@ -52,7 +58,7 @@
 
     <section>
       <h2>about</h2>
-      <p class="body-copy">18. second year undergrad. i build things. that's it.</p>
+      <p class="body-copy">second year cs undergrad. i build web apps.</p>
     </section>
 
     <section>
@@ -78,66 +84,55 @@
     </section>
 
     <section>
-      <h2>projects</h2>
-      <div class="project">
-        <div class="item-header">
-          <h3>AirIQ – Smart Air Quality Monitor</h3>
-          <a href="https://github.com/atetoon/AirIQ" target="_blank" rel="noopener noreferrer" aria-label="AirIQ GitHub" title="GitHub">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12C24 5.37 18.63 0 12 0z" /></svg>
-          </a>
-        </div>
-        <ul>
-          <li>Web app for monitoring AQI with live environmental APIs.</li>
-          <li>Uses geolocation and Leaflet maps to show location-specific AQI, PM2.5, and PM10 data.</li>
-          <li>Includes dynamic dashboards, health recommendations, interactive assistant, and dark/light mode.</li>
-        </ul>
-      </div>
+  <h2>projects</h2>
+  <div class="project">
+    <div class="item-header">
+      <h3><a href="https://github.com/atetoon/AirIQ" target="_blank" rel="noopener noreferrer">AirIQ – Smart Air Quality Monitor</a></h3>
+      <a href="https://atetoon.github.io/AirIQ/" target="_blank" rel="noopener noreferrer">live</a>
+    </div>
+    <ul>
+      <li>Web app for monitoring AQI with live environmental APIs.</li>
+      <li>Uses geolocation and Leaflet maps to show location-specific AQI, PM2.5, and PM10 data.</li>
+      <li>Includes dynamic dashboards, health recommendations, interactive assistant, and dark/light mode.</li>
+    </ul>
+  </div>
 
-      <div class="project">
-        <div class="item-header">
-          <h3>Personal Budget</h3>
-          <a href="https://github.com/atetoon/personal-budget" target="_blank" rel="noopener noreferrer" aria-label="Personal Budget GitHub" title="GitHub">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12C24 5.37 18.63 0 12 0z" /></svg>
-          </a>
-        </div>
-        <ul>
-          <li>Full-stack envelope budgeting dashboard for managing income and expenses.</li>
-          <li>Supports creating, editing, deleting, and transferring funds between budget categories.</li>
-          <li>Built with a simple REST API and a responsive interface.</li>
-        </ul>
-      </div>
+  <div class="project">
+    <div class="item-header">
+      <h3><a href="https://github.com/atetoon/personal-budget" target="_blank" rel="noopener noreferrer">Personal Budget</a></h3>
+      <a href="https://personal-budget-8rp7.onrender.com/" target="_blank" rel="noopener noreferrer">live</a>
+    </div>
+    <ul>
+      <li>Full-stack envelope budgeting dashboard for managing income and expenses.</li>
+      <li>Supports creating, editing, deleting, and transferring funds between budget categories.</li>
+      <li>Built with a simple REST API and a responsive interface.</li>
+    </ul>
+  </div>
 
-      <div class="project">
-        <div class="item-header">
-          <h3>Cinéma</h3>
-          <a href="https://github.com/atetoon/cinema-search" target="_blank" rel="noopener noreferrer" aria-label="Cinema GitHub" title="GitHub">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12C24 5.37 18.63 0 12 0z" /></svg>
-          </a>
-        </div>
-        <ul>
-          <li>Movie discovery app that searches films by title or genre using OMDb and TMDB.</li>
-          <li>Uses async requests to fetch movie details, ratings, posters, and backdrops.</li>
-          <li>Includes a clean browsing flow with random genre discovery.</li>
-        </ul>
-      </div>
+  <div class="project">
+    <div class="item-header">
+      <h3><a href="https://github.com/atetoon/cinema-search" target="_blank" rel="noopener noreferrer">Cinéma</a></h3>
+      <a href="https://cinema-search-two.vercel.app/" target="_blank" rel="noopener noreferrer">live</a>
+    </div>
+    <ul>
+      <li>Movie discovery app that searches films by title or genre using OMDb and TMDB.</li>
+      <li>Uses async requests to fetch movie details, ratings, posters, and backdrops.</li>
+      <li>Includes a clean browsing flow with random genre discovery.</li>
+    </ul>
+  </div>
 
-      <div class="project">
-        <div class="item-header">
-          <h3>Weather App</h3>
-          <a href="https://github.com/atetoon/Weather-App" target="_blank" rel="noopener noreferrer" aria-label="Weather App GitHub" title="GitHub">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12C24 5.37 18.63 0 12 0z" /></svg>
-          </a>
-        </div>
-        <ul>
-          <li>Weather app with city search and location-based lookup.</li>
-          <li>Shows current conditions and a 24-hour forecast with dynamic icons.</li>
-          <li>Built with WeatherAPI, geolocation, and async fetch requests.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section></section>
-
+  <div class="project">
+    <div class="item-header">
+      <h3><a href="https://github.com/atetoon/Weather-App" target="_blank" rel="noopener noreferrer">Weather App</a></h3>
+      <a href="https://atetoon.github.io/Weather-App/" target="_blank" rel="noopener noreferrer">live</a>
+    </div>
+    <ul>
+      <li>Weather app with city search and location-based lookup.</li>
+      <li>Shows current conditions and a 24-hour forecast with dynamic icons.</li>
+      <li>Built with WeatherAPI, geolocation, and async fetch requests.</li>
+    </ul>
+  </div>
+</section>
     
   </main>
 
