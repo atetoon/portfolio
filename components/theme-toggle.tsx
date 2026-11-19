@@ -1,44 +1,77 @@
 
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTheme } from "next-themes";
-import Sun from "@/components/icons/sun";
-import Moon from "@/components/icons/moon";
+import { Sun, Moon } from "scribbles-icons";
 
 export default function ThemeToggle() {
   const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
     setMounted(true);
+
+    return () => {
+      audioRef.current?.pause();
+    };
   }, []);
 
-  if (!mounted) return null;
+  function toggleTheme() {
+    const audio = audioRef.current;
+
+    if (audio) {
+      audio.currentTime = 0;
+      audio.play().catch(() => {});
+    }
+
+    setTheme(resolvedTheme === "dark" ? "light" : "dark");
+  }
+
+  if (!mounted) {
+    return (
+      <button
+        type="button"
+        aria-label="Toggle theme"
+        className="flex size-11 shrink-0 items-center justify-center rounded-xl"
+      >
+        <span className="size-[28.8px] rounded-lg bg-black/5 dark:bg-white/10" />
+      </button>
+    );
+  }
 
   const dark = resolvedTheme === "dark";
 
-  function toggleTheme() {
-    const audio = new Audio("/sounds/bubble-click.wav");
-    audio.volume = 0.04;
-    audio.play().catch(() => {});
-
-    setTheme(dark ? "light" : "dark");
-  }
-
   return (
-    <button
-      type="button"
-      onClick={toggleTheme}
-      aria-label="Toggle theme"
-      title="Toggle theme"
-      className="flex size-8 items-center justify-center rounded-md text-[#28231f] transition-colors duration-200 hover:bg-black/5 hover:text-black dark:text-[#eeeae1] dark:hover:bg-white/10 dark:hover:text-white"
-    >
-      {dark ? (
-        <Moon className="size-[18px]" />
-      ) : (
-        <Sun className="size-[18px]" />
-      )}
-    </button>
+    <>
+      <button
+        type="button"
+        onClick={toggleTheme}
+        aria-label={`Switch to ${dark ? "light" : "dark"} mode`}
+        title={`Switch to ${dark ? "light" : "dark"} mode`}
+        className="flex size-11 shrink-0 items-center justify-center rounded-xl text-[#929292] outline-offset-2 transition-colors duration-300 hover:text-[#28231f] focus-visible:outline-2 dark:text-[#999] dark:hover:text-white"
+      >
+        <span className="relative flex size-[28.8px] items-center justify-center overflow-hidden rounded-lg bg-black/5 dark:bg-white/10">
+          <Sun
+            size={14.4}
+            weight="fill"
+            className={`absolute transition-transform duration-300 ${
+              dark ? "-rotate-90 scale-0" : "rotate-0 scale-100"
+            }`}
+          />
+
+          <Moon
+            size={14.4}
+            weight="fill"
+            className={`absolute transition-transform duration-300 ${
+              dark ? "rotate-0 scale-100" : "rotate-90 scale-0"
+            }`}
+          />
+        </span>
+      </button>
+
+      <audio ref={audioRef} src="/sounds/switch.mp3" preload="none" />
+    </>
   );
 }
