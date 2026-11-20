@@ -8,3 +8,14 @@
   font-weight: 100 900;
   font-style: normal;
 }
+
+@theme inline {
+  --font-sans: var(--font-dm-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-instrument-serif);
+  --font-press-start: var(--font-press-start-2p);
+}
+
+.dark .vt-root {
+  --vt-ink: #eeeae1;
+}
