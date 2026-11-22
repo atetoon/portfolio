@@ -1,4 +1,4 @@
 # Dhruv Pandey — Portfolio
 
-Portfolio Stage 1 - Half done
+Portfolio Stage 1
 
